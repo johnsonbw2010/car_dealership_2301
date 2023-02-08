@@ -18,4 +18,13 @@ RSpec.describe Dealership do
   dealership.add_car(car_2)
   expect(dealership.inventory_count).to eq(2)
   end
+
+  it 'differentiates between inventory or no inventory' do
+    dealership = Dealership.new("Acme Auto", "123 Main Street")
+    car_1 = Car.new("Ford Mustang", 1500, 36)
+    car_2 = Car.new("Toyota Prius", 1000, 48)
+    expect(dealership.has_inventory?).to eq(false)
+    dealership.add_car(car_1)
+    expect(dealership.has_inventory?).to eq(true)
+  end
 end
