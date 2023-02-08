@@ -40,4 +40,9 @@ class Dealership
     end
     total_value.sum
   end
+
+  def details
+    value = self.total_value
+    p "Total value is #{value}, and the dealership is located at #{self.address}"
+  end
 end
