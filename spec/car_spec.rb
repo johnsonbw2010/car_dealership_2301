@@ -43,6 +43,5 @@ RSpec.describe Car do
     car.paint!(:blue)
 
     expect(car.color).to eq(:blue)
-    require 'pry'; binding.pry
   end
 end
